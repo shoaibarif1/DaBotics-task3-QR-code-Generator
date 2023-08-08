@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/KFDQxfH/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <script type="text/javascript">
+        function genQR()
+        {
+            var gapi="https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
+            var myimg=document.getElementById("img");
+            var mytext=document.getElementById("qrtext").value;
+      
+            myimg.src=gapi+"150x150"+"&chl="+mytext;
+          
+        }
+    </script>
+    <div class="container">
+      
+        <br>
+        <center>
+            <h1>Generate Qr code</h1>
+        <br><br>
+        <textarea placeholder="Enter Your Url" id="qrtext" class="text"></textarea>
+        <br><br>
+   
+        <br><br>
+        <input type="submit" class="submit" value="Generate" onclick="genQR()">
+        <br><br>
+        <img src= "qr.png" width="90px" height="90px" class="qr" id="img">
+        <br><br><br>
+        </center>
+        <div class="footer">
+            <div class="footer_name">Developed By Shoaib Arif</div>
+            <div class="follow">
+                <p style="display: inline">Follow:</p>
+                <a href="https://github.com/shoaibarif1" target="_blank"><i class="fa fa-github" style="font-size: 20px"></i></a>
+                <a href="https://www.linkedin.com/in/shoaib-arif-9b253921a" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 20px"></i></a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
